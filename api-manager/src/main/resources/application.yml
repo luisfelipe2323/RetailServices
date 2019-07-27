@@ -18,9 +18,15 @@ zuul:
   ignoredServices: '*'
   prefix: /api
   routes:
-    project:
-      path: /catalogos/**
-      url: http://localhost:8090
+    order:
+      path: /orders/**
+      url: order-service
+    product:
+      path: /products/**
+      url: product-service
+    user:
+      path: /users/**
+      url: user-service
   ignored-headers: Access-Control-Allow-Credentials, Access-Control-Allow-Origin
 
 ribbon:
